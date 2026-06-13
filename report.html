@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>举报商家</title>
+  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="css/global.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      background-color: #f5f5f5;
+      font-family: sans-serif;
+    }
+    .wrapper {
+      min-height: 100vh;
+    }
+    .banner {
+      background: linear-gradient(to right, #ff8800, #ffaa33);
+      color: #fff;
+      padding: 8vw 4vw;
+      position: relative;
+      overflow: hidden;
+      width: 100%;
+    }
+    .banner-title {
+      font-size: 6vw;
+      font-weight: bold;
+      margin-bottom: 2vw;
+    }
+    .banner-subtitle {
+      font-size: 4vw;
+      opacity: 0.9;
+    }
+    .banner-avatar {
+      position: absolute;
+      right: 5vw;
+      top: 3vw;
+      width: 20vw;
+      height: 20vw;
+    }
+    .report-list {
+      background: #fff;
+      margin: -4vw 4vw 4vw;
+      border-radius: 3vw;
+      overflow: hidden;
+    }
+    .report-item {
+      display: flex;
+      align-items: center;
+      padding: 4vw;
+      border-bottom: 1px solid #eee;
+    }
+    .report-item:last-child {
+      border-bottom: none;
+    }
+    .report-icon {
+      width: 10vw;
+      height: 10vw;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4vw;
+      color: #fff;
+      margin-right: 3vw;
+    }
+    .report-icon.blue {
+      background-color: #e6f0ff;
+      color: #2b78e4;
+    }
+    .report-icon.orange {
+      background-color: #fff3e0;
+      color: #ff9800;
+    }
+    .report-icon.green {
+      background-color: #e8f5e9;
+      color: #4caf50;
+    }
+    .report-icon.warn {
+      background-color: #fff8e1;
+      color: #ffc107;
+    }
+    .report-content {
+      flex: 1;
+    }
+    .report-title {
+      padding-top: 5vw;
+      font-size: 4.5vw;
+      font-weight: bold;
+      margin-bottom: 1vw;
+    }
+    .report-desc {
+      font-size: 3.2vw;
+      color: #666;
+    }
+    .report-btn {
+      font-size: 3.5vw;
+      color: #999;
+    }
+    .faq-section, .feedback-section {
+      background: #fff;
+      margin: 0 4vw 4vw;
+      border-radius: 2vw;
+      padding: 4vw;
+    }
+    .section-title {
+      font-size: 4.5vw;
+      font-weight: bold;
+      margin-bottom: 3vw;
+    }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2vw;
+    }
+    .faq-item {
+      background: #f5f7fa;
+      padding: 3vw;
+      border-radius: 2vw;
+      text-align: center;
+      font-size: 3.5vw;
+      color: #333;
+    }
+    .feedback-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 3vw;
+    }
+    .feedback-btn {
+      font-size: 3.5vw;
+      color: #666;
+    }
+    .feedback-content {
+      display: flex;
+      align-items: flex-start;
+      gap: 3vw;
+    }
+    .feedback-icon {
+      width: 15vw;
+      height: 15vw;
+    }
+    .feedback-text {
+      flex: 1;
+      font-size: 3.5vw;
+      line-height: 1.5;
+      color: #666;
+    }
+    .record-btn {
+      position: fixed;
+      right: 5vw;
+      bottom: 5vw;
+      width: 15vw;
+      height: 15vw;
+      background: #ff6600;
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5vw;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div class="banner">
+    <div class="banner-title">好环境，大家一起来守护</div>
+    <div class="banner-subtitle">欢迎参与平台投诉举报~</div>
+    <div class="banner-avatar">
+      <img src="img/img/userImg/yhtx02.png"></div>
+  </div>
+
+  <div class="report-list">
+    <div class="report-item">
+      <div class="report-icon blue">
+        <i class="fa-solid fa-file"></i>
+      </div>
+      <div class="report-content">
+        <div class="report-title">知识产权维权</div>
+        <div class="report-desc">著作权侵权，商标侵权，专利侵权</div>
+      </div>
+      <div class="report-btn">举报 <i class="fa-solid fa-chevron-right"></i></div>
+    </div>
+
+    <div class="report-item">
+      <div class="report-icon orange">
+        <i class="fa-solid fa-lightbulb"></i>
+      </div>
+      <div class="report-content">
+        <div class="report-title">刷单作弊</div>
+        <div class="report-desc">商户通过虚构评价&销量等获取不当利益</div>
+      </div>
+      <div class="report-btn">举报 <i class="fa-solid fa-chevron-right"></i></div>
+    </div>
+
+    <div class="report-item">
+      <div class="report-icon green">
+        <i class="fa-solid fa-square-check"></i>
+      </div>
+      <div class="report-content">
+        <div class="report-title">超范围经营</div>
+        <div class="report-desc">餐饮商家超出经营范围售卖商品</div>
+      </div>
+      <div class="report-btn">举报 <i class="fa-solid fa-chevron-right"></i></div>
+    </div>
+
+    <div class="report-item">
+      <div class="report-icon warn">
+        <i class="fa-solid fa-triangle-exclamation"></i>
+      </div>
+      <div class="report-content">
+        <div class="report-title">禁限售举报</div>
+        <div class="report-desc">出售《淘宝闪购平台禁发商品及信息名录》中违规商品</div>
+      </div>
+      <div class="report-btn">举报 <i class="fa-solid fa-chevron-right"></i></div>
+    </div>
+  </div>
+
+  <div class="faq-section">
+    <div class="section-title">常见问题</div>
+    <div class="faq-grid">
+      <div class="faq-item">如何准确进行举报</div>
+      <div class="faq-item">如何查看举报进度</div>
+      <div class="faq-item">多久会有处理结果</div>
+      <div class="faq-item">“幽灵外卖”如何举报</div>
+    </div>
+  </div>
+
+  <div class="feedback-section">
+    <div class="feedback-header">
+      <div class="section-title">规则信箱</div>
+      <div class="feedback-btn">
+        <i class="fa-solid fa-pen-to-square"></i> 我要反馈
+      </div>
+    </div>
+    <div class="feedback-content">
+      <div class="feedback-icon">
+        <!-- 可以放信封图标图片 -->
+      </div>
+      <div class="feedback-text">
+        若您对平台规则建设有其他宝贵建议，欢迎提交意见信，我们将认真对待，不断改进。
+      </div>
+    </div>
+  </div>
+
+  <div class="record-btn">
+    <i class="fa-solid fa-list"></i>
+  </div>
+</div>
+</body>
+</html>

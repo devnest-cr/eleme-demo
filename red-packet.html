@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>红包&券</title>
+  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="css/red-packet.css">
+  <script src="js/red-packet.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  <!-- 顶部返回 -->
+  <div class="top-bar">
+    <i class="fa-solid fa-angle-left" style="font-size:5vw" onclick="goBack()"></i>
+  </div>
+
+  <!-- 红包 / 券 标签 -->
+  <div class="tab-header">
+    <div class="tab-item active" onclick="switchTab(1)">
+      红包 <span class="count">23</span>
+    </div>
+    <div class="tab-item" onclick="switchTab(2)">券</div>
+  </div>
+
+  <!-- 红包内容面板 -->
+  <div id="tabRed" class="tab-content active">
+    <div class="filter-bar">
+      <div class="filter-btn">默认排序 ▾</div>
+      <div class="filter-btn">超级吃货卡</div>
+      <div class="filter-btn">平台红包</div>
+      <div class="filter-btn">商品红包</div>
+      <div class="filter-btn">店铺红包</div>
+    </div>
+
+    <div class="red-packet-list">
+      <div class="packet-card">
+        <div class="packet-tag">超级吃货卡</div>
+        <div class="packet-header">
+          <div class="packet-icon vip">👑</div>
+          <div class="packet-info">
+            <div class="packet-name">爆红包 <span style="font-size:3vw;background:#ff6600;color:#fff;padding:0.3vw 1vw;border-radius:1vw;">5张</span></div>
+            <div class="packet-expire">2026.06.18 23:59 到期</div>
+          </div>
+          <div class="packet-value">
+            <div class="packet-amount">¥5起</div>
+            <div class="packet-desc">无门槛</div>
+          </div>
+        </div>
+        <div class="packet-rule">
+          <span>单次可用一张 ▾</span>
+        </div>
+      </div>
+
+      <div class="packet-card normal">
+        <div class="soon-expire-tag">将到期</div>
+        <div class="packet-header">
+          <div class="packet-icon red">🧧</div>
+          <div class="packet-info">
+            <div class="packet-name">购物爆红包</div>
+            <div class="packet-expire warn">今日 23:59 到期</div>
+          </div>
+          <div class="packet-value">
+            <div class="packet-amount warn">¥16</div>
+            <div class="packet-desc">满16可用</div>
+          </div>
+        </div>
+        <div class="packet-rule">
+          <span>实付金额不低于0.01元 ▾</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 券内容面板 -->
+  <div id="tabCoupon" class="tab-content">
+    <div class="filter-bar">
+      <div class="filter-btn">默认排序 ▾</div>
+    </div>
+    <div class="empty-state">
+      <div class="empty-icon">📄</div>
+      <div class="empty-title">没有可用券</div>
+      <div class="empty-desc">诶嘿，居然一张券都没有</div>
+    </div>
+  </div>
+
+  <!-- 底部导航 -->
+  <div class="footer-nav">
+    <div class="nav-item">历史红包</div>
+    <div class="nav-item">兑换码</div>
+    <div class="nav-item">领红包</div>
+  </div>
+</div>
+</body>
+</html>

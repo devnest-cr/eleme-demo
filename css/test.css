@@ -1,0 +1,282 @@
+/* 总容器 */
+.wrapper {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f3f6f8;
+}
+
+/* 头部 */
+.header {
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    width: 100%;
+    height: 12vw;
+    background-color: #ed6c2d;
+    padding: 0 3vw;
+    color: white;
+    font-size: 3.2vw;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.header .logo {
+    font-size: 5.5vw;
+    font-family: "Yuppy One", cursive;
+}
+
+/* 搜索样式 */
+.query {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 12vw;
+    padding: 2.5vw 0;
+    background-color: #f3f6f8;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+}
+
+.search-panel {
+    width: 94%;
+    height: 8vw;
+    display: flex;
+    align-items: center;
+    background: #fff;
+    border-radius: 2vw;
+    overflow: hidden;
+}
+
+.search-panel i {
+    padding: 0 2.5vw;
+    color: #999;
+    font-size: 3.5vw;
+}
+
+.search-panel input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 4vw;
+    color: #333;
+}
+
+.search-button {
+    width: 20%;
+    height: 100%;
+    background-color: #ed6c2d;
+    color: white;
+    font-size: 4vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+/* 主体 */
+.main {
+    margin-top: 25vw;
+    margin-bottom: 15vw;
+    width: 100%;
+    padding: 0 2vw;
+    box-sizing: border-box;
+}
+
+.main .mainTop {
+    color: #999;
+    width: 100%;
+    font-size: 3.2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3vw 0;
+}
+
+.main .mainTop .line {
+    flex: 1;
+    height: 1px;
+    background-color: #dfdfdf;
+    margin: 0 2vw;
+}
+
+/* 商家样式 */
+.businessList {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5vw;
+}
+
+.business {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border-radius: 2.5vw;
+    padding: 3.5vw;
+    gap: 3vw;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.business img {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 1.5vw;
+    object-fit: cover;
+}
+
+.businessInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2.2vw;
+    font-size: 3.2vw;
+    color: #626262;
+}
+
+.businessTitle {
+    font-size: 4vw;
+    font-weight: bold;
+    color: #191919;
+}
+
+/* 评分 月售 时间 距离 */
+.businessSaleInf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.saleInfLeft {
+    display: flex;
+    gap: 3vw;
+}
+
+.saleInfLeft .score {
+    color: #ED7531;
+    font-weight: bold;
+    font-size: 3.8vw;
+}
+
+.saleInfRight {
+    display: flex;
+    gap: 3vw;
+}
+
+/* 配送信息 */
+.deliverInf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deliverInfLeft {
+    display: flex;
+    gap: 3.5vw;
+}
+
+.deliverInfRight span {
+    font-size: 2.8vw;
+    color: #ed6c2d;
+    border: 1px solid #ed6c2d;
+    padding: 0.6vw 2vw;
+    border-radius: 1vw;
+    background: #fff9f5;
+}
+
+.deliver-original {
+    text-decoration: line-through;
+    color: #999;
+}
+
+.deliver-current {
+    color: #111;
+    font-weight: bold;
+}
+
+/* 评价栏 */
+.describeInf {
+    background-color: #fff9e6;
+    color: #333;
+    font-size: 3.1vw;
+    padding: 2vw 2.5vw;
+    border-radius: 1vw;
+}
+
+.describeInf .highlight {
+    color: #ff4400;
+    font-weight: bold;
+}
+
+/* 扩展信息（优惠标签） */
+.extendInf {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.extendInfLeft {
+    display: flex;
+    gap: 2vw;
+}
+
+.tag-red {
+    color: #ff4400;
+    background: #fff3ee;
+    border: 1px solid #ffb399;
+    padding: 0.6vw 2vw;
+    border-radius: 1vw;
+    font-size: 2.8vw;
+}
+
+.tag-grey {
+    color: #666;
+    background: #f5f7fa;
+    border: 1px solid #ddd;
+    padding: 0.6vw 2vw;
+    border-radius: 1vw;
+    font-size: 2.8vw;
+}
+
+.extendInfRight {
+    color: #999;
+}
+/*订单*/
+
+
+/*我的*/
+
+
+/* 底部 */
+.footer {
+    border-top: 1px solid #eee;
+    width: 100%;
+    height: 13vw;
+    background: #fff;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 999;
+
+}
+
+.footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    color: #404454;
+}
+
+.footer i {
+    font-size: 4.5vw;
+}
+
+.footer p {
+    font-size: 2.5vw;
+    margin: 0;
+}

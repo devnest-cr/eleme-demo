@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>确认订单</title>
+  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="css/order-confirm.css">
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="top-bar">
+    <i class="fa-solid fa-angle-left" onclick="window.history.back()" style="float:left"></i>
+    <h4 style="float: left">确认订单</h4>
+    <br><p style="float: left;font-size:3vw;color: #7f8c8d">适量点餐，环保健康</p></br>
+  </div>
+  <!-- 地址 -->
+  <div class="section">
+    <div class="addr-item">
+      <div class="addr-info">
+        <h1>昆明市呈贡区书香大地小区</h1>
+        <p>杨先生 183****9284 <i class="fa-solid fa-pen"></i></p>
+      </div>
+      <i class="fa-solid fa-chevron-right"></i>
+    </div>
+  </div>
+
+  <!-- 配送时间 -->
+  <div class="section">
+    <div class="section-title">配送时间</div>
+    <div class="time-item">
+      <span>尽快送达</span>
+      <i class="fa-solid fa-chevron-right"></i>
+    </div>
+  </div>
+
+  <!-- 支付方式 -->
+  <div class="section">
+    <div class="section-title">支付方式</div>
+    <label class="pay-item">
+      <img src="img/img/wechat.png" height="40" width="140"/>
+      <input type="radio" name="pay" checked>
+    </label>
+    <label class="pay-item" >
+      <img src="img/img/alipay.png" height="40" width="140"/>
+      <input type="radio" name="pay">
+    </label>
+  </div>
+
+  <!-- 商品 -->
+  <div class="section">
+    <div class="section-title">商品清单</div>
+    <div class="goods-item">
+      <span>片皮烤鸭</span>
+      <span>x1 ¥38.88</span>
+    </div>
+    <div class="price-row">
+      <span>商品总价</span>
+      <span>¥38.88</span>
+    </div>
+    <div class="price-row">
+      <span>配送费</span>
+      <span>¥3.3</span>
+    </div>
+    <div class="total-row">
+      <span>实付款</span>
+      <span>¥42.18</span>
+    </div>
+  </div>
+
+  <!-- 底部支付 -->
+  <div class="pay-footer">
+    <div class="pay-total">¥42.18</div>
+    <div class="pay-btn">提交订单</div>
+  </div>
+</div>
+
+</body>
+</html>

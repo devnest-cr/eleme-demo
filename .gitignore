@@ -1,0 +1,20 @@
+# WebStorm IDE配置
+.idea/
+*.iml
+out/
+
+# Node依赖
+node_modules/
+package-lock.json
+npm-debug.log
+
+# Mac系统残留文件
+__MACOSX/
+.DS_Store
+
+# Claude AI插件缓存
+.claude/
+
+# 临时文件
+临时文件和控制台/
+外部库/

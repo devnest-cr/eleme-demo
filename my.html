@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>我的</title>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="js/global.js"></script>
+    <link rel="stylesheet" href="css/my.css">
+    <script src="js/my.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <!-- 我的页面头部 -->
+    <div class="my-header">
+        <div class="logo">闪购</div>
+        <div class="user-info">
+            <div class="avatar">
+                <img src="img/img/super_member.png" alt="头像">
+            </div>
+            <div class="phone">183****9284</div>
+            <div class="account-btn" onclick="openModal()">账户管理</div>
+        </div>
+    </div>
+
+    <!-- 功能入口 -->
+    <div class="my-menu">
+        <div class="menu-item"  onclick="window.location.href='red-packet.html'">
+            <i class="fa-solid fa-wallet"></i>
+            <div>
+                <p>我的资产</p>
+            </div>
+            <i class="fa-solid fa-chevron-right"></i>
+        </div>
+
+        <div class="menu-item"  onclick="window.location.href='red-packet.html'">
+            <i class="fa-solid fa-envelope-open" style="color: #ff6600;"></i>
+            <div>
+                <p>红包</p>
+                <span>查看我的红包</span>
+            </div>
+        </div>
+
+        <div class="menu-item"  onclick="window.location.href='red-packet.html'">
+            <i class="fa-solid fa-ticket" style="color: #ff6600;"></i>
+            <div>
+                <p>券包</p>
+                <span>查看我的券</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="version-info">11.22.138-1</div>
+
+    <!-- 底部导航 -->
+    <div class="footer">
+        <div id="MenuHome" onclick="clickMenu(1)">
+            <i class="fa-solid fa-house"></i>
+            <p>首页</p>
+        </div>
+        <div id="MenuOrder" onclick="clickMenu(2)">
+            <i class="fa-regular fa-paste"></i>
+            <p>订单</p>
+        </div>
+        <div id="MenuMy" onclick="clickMenu(3)" style="color: #ed6c2d">
+            <i class="fa-solid fa-user"></i>
+            <p>我的</p>
+        </div>
+    </div>
+</div>
+
+<!-- 账户管理弹窗 -->
+<div id="accountModal" class="account-modal" onclick="closeModal(event)">
+    <div class="modal-content">
+        <div class="modal-item" style="font-size:5vw"><b>账户管理</b></div>
+        <div class="modal-item">退出登录</div>
+        <div class="modal-item" onclick="closeModal()">取消</div>
+    </div>
+</div>
+
+</body>
+</html>

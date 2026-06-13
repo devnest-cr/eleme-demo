@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>我的订单</title>
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/order.css">
+    <script src="js/order.js"></script>
+    <script src="js/global.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="header">
+        <div class="query">
+            <div class="search-panel">
+                <i class="fa-brands fa-sistrix" style="flex:0 0 6vw;"></i>
+                <input type="text" placeholder="搜订单"
+                       style="color:black; background-color:#F4F6F8;flex:10;outline: none;border: none;">
+            </div>
+        </div>
+        <div class="menu">
+            <div class="menu-item active" onclick="clickPanel(1)">全部</div>
+            <div class="menu-item" onclick="clickPanel(2)">进行中</div>
+            <div class="menu-item" onclick="clickPanel(3)">退款</div>
+            <div id="menu-line"></div>
+        </div>
+    </div>
+
+    <div style="margin-top: 12vh; padding: 0 3vw;">
+        <!-- ===================== 全部订单 ===================== -->
+        <div id="panel1">
+            <div class="order-item" onclick="goOrderDetail()">
+                <!-- 商家信息行 -->
+                <div class="order-shop-header">
+                    <img src="img/img/sp05.png" alt="商家logo" class="shop-logo">
+                    <div class="shop-info">
+                        <div class="shop-name-row">
+                            <span class="shop-name">北京片皮烤鸭（书香大地店）</span>
+                            <span class="arrow-icon">></span>
+                        </div>
+                        <div class="donation-tag">商家捐赠0.02元</div>
+                    </div>
+                    <div class="order-status">已取出</div>
+                </div>
+
+                <!-- 商品信息行 -->
+                <div class="order-goods-row">
+                    <div class="goods-left">
+                        <img src="img/img/sp06.png" alt="商品图" class="goods-img">
+<!--                        <span class="sold-out-tag">已下架</span>-->
+                    </div>
+                    <div class="goods-info">
+                        <div class="goods-name">片皮烤鸭</div>
+                        <div class="goods-spec">1份</div>
+                        <div class="service-tags">
+                            <span class="tag">食品安全理赔</span>
+                            <span class="tag">慢必赔</span>
+                        </div>
+                    </div>
+                    <div class="goods-price-info">
+                        <div class="price">¥12.9</div>
+                        <div class="quantity">共1件</div>
+                    </div>
+                </div>
+                <!-- 底部按钮 -->
+                <div class="order-action">
+                    <button class="buy-btn">再买一单</button>
+                </div>
+            </div>
+            <div class="order-item" onclick="goOrderDetail()">
+                <!-- 商家信息行 -->
+                <div class="order-shop-header">
+                    <img src="img/img/sp05.png" alt="商家logo" class="shop-logo">
+                    <div class="shop-info">
+                        <div class="shop-name-row">
+                            <span class="shop-name">北京片皮烤鸭（书香大地店）</span>
+                            <span class="arrow-icon">></span>
+                        </div>
+                        <div class="donation-tag">商家捐赠0.02元</div>
+                    </div>
+                    <div class="order-status">已取出</div>
+                </div>
+
+                <!-- 商品信息行 -->
+                <div class="order-goods-row">
+                    <div class="goods-left">
+                        <img src="img/img/sp06.png" alt="商品图" class="goods-img">
+                        <span class="sold-out-tag">已下架</span>
+                    </div>
+                    <div class="goods-info">
+                        <div class="goods-name">片皮烤鸭</div>
+                        <div class="goods-spec">1份</div>
+                        <div class="service-tags">
+                            <span class="tag">食品安全理赔</span>
+                            <span class="tag">慢必赔</span>
+                        </div>
+                    </div>
+                    <div class="goods-price-info">
+                        <div class="price">¥12.9</div>
+                        <div class="quantity">共1件</div>
+                    </div>
+                </div>
+                <!-- 底部按钮 -->
+                <div class="order-action">
+                    <button class="buy-btn">再买一单</button>
+                </div>
+            </div>
+            <div class="order-tip">仅显示最近三年的订单</div>
+        </div>
+
+        <!-- ===================== 进行中（空） ===================== -->
+        <div id="panel2" style="display: none;">
+            <div class="empty-box">
+                <div class="empty-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="empty-title">暂无进行中订单</div>
+                <div class="empty-desc">那些猝不及防的瞬间 也是生活的小插曲</div>
+            </div>
+        </div>
+
+        <!-- ===================== 退款（空） ===================== -->
+        <div id="panel3" style="display: none;">
+            <div class="empty-box">
+                <div class="empty-icon">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="empty-title">近3个月内无退款订单</div>
+                <div class="empty-desc">那些猝不及防的瞬间 也是生活的小插曲</div>
+            </div>
+        </div>
+    </div>
+
+    <div>&nbsp;&nbsp;</div>
+    <div class="footer">
+        <div id="MenuHome" onclick="clickMenu(1)">
+            <i class="fa-solid fa-house"></i>
+            <p>首页</p>
+        </div>
+        <div id="MenuOrder" onclick="clickMenu(2)" style="color:#EC602A;">
+            <i class="fa-regular fa-paste"></i>
+            <p>订单</p>
+        </div>
+        <div id="MenuMy" onclick="clickMenu(3)">
+            <i class="fa-solid fa-user"></i>
+            <p>我的</p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

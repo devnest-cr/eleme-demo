@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>商家详情</title>
+  <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+  <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css">
+  <link rel="stylesheet" href="css/global.css">
+  <link rel="stylesheet" href="css/businessinfo.css">
+  <script src="js/businessinfo.js"></script>
+</head>
+<body>
+<div class="wrapper">
+  <!-- 返回箭头 -->
+  <div class="back-arrow" onclick="window.history.back()">
+    <i class="fa-solid fa-angle-left"></i>
+  </div>
+
+  <!-- 店铺头部信息 -->
+  <div class="shop-header">
+    <div class="shop-info">
+      <img src="img/img/sp01.png" alt="店铺logo">
+      <div>
+        <h2 class="shop-name">北京片皮烤鸭(书香大地店)</h2>
+        <div class="shop-meta">
+          <span class="score">4.4</span>
+          <span>月售 600+</span>
+          <span>蜂鸟准时达 约26分钟</span>
+        </div>
+      </div>
+    </div>
+    <div class="coupon-bar">
+      <span class="coupon">16减13</span>
+      <span class="coupon">25减14</span>
+      <span class="coupon">35减15</span>
+      <span class="coupon">¥2元 领</span>
+    </div>
+    <div class="tag-bar">
+      <span class="tag">80减5</span>
+      <span class="tag">60减3</span>
+      <span class="tag">40减2</span>
+      <span class="tag">配送费优惠</span>
+      <span class="tag">特价商品</span>
+      <span class="tag">集点返券</span>
+    </div>
+  </div>
+
+  <!-- 点餐/评价/商家 标签 -->
+  <div class="content-tab">
+    <div class="tab-item active" onclick="switchContentTab(1)">点餐</div>
+    <div class="tab-item" onclick="switchContentTab(2)">评价 1322</div>
+    <div class="tab-item" onclick="switchContentTab(3)">商家</div>
+  </div>
+
+  <!-- 点餐面板 -->
+  <div id="tab-food" class="tab-content active">
+    <div class="content-area">
+      <!-- 左侧分类 -->
+      <div class="category-list">
+        <div class="category-item active" onclick="switchCategory(1)">热销</div>
+        <div class="category-item" onclick="switchCategory(2)">精选推荐</div>
+        <div class="category-item" onclick="switchCategory(3)">收藏福利</div>
+        <div class="category-item" onclick="switchCategory(4)">片皮烤鸭</div>
+        <div class="category-item" onclick="switchCategory(5)">砍块烤鸭</div>
+        <div class="category-item" onclick="switchCategory(6)">超值加料</div>
+        <div class="category-item" onclick="switchCategory(7)">五常米饭</div>
+      </div>
+
+      <!-- 右侧商品区域 -->
+      <div class="goods-list">
+        <!-- 热销内容 -->
+        <div id="cate1" class="cate-panel">
+          <div class="goods-banner">
+            <p>App搜索 "7216" 免费领取大额红包</p>
+          </div>
+          <p class="goods-title">热销 大家喜欢吃，才叫真好吃</p>
+
+          <div class="goods-item">
+            <img src="img/img/sp01.png" alt="片皮烤鸭" class="goods-img">
+            <div class="goods-info">
+              <span class="goods-tag">招牌</span>
+              <h3 class="goods-name">片皮烤鸭一只+面皮+秘制酱+葱丝+黄瓜条</h3>
+              <p class="goods-desc">本店热销榜第1名</p>
+              <p class="goods-desc">月售 100+ 好评率 93%</p>
+              <p class="goods-price">
+                <span class="discount">8.1折</span>
+                <span class="original">¥48</span>
+                <span class="sale">¥38.88</span>
+                <span class="sale-tip">预估到手 ¥21.88</span>
+              </p>
+            </div>
+            <button class="add-btn" onclick="addToCart(this)">+</button>
+          </div>
+
+          <div class="goods-item">
+            <img src="img/img/sp01.png" alt="片皮烤鸭" class="goods-img">
+            <div class="goods-info">
+              <span class="goods-tag">招牌</span>
+              <h3 class="goods-name">片皮烤鸭半只+面皮20张</h3>
+              <p class="goods-desc">本店热销榜第5名</p>
+              <p class="goods-desc">月售 95 好评率 97%</p>
+              <p class="goods-price">
+                <span class="discount">9.21折</span>
+                <span class="original">¥27</span>
+                <span class="sale">¥24.88</span>
+                <span class="sale-tip">预估到手 ¥11.88</span>
+              </p>
+            </div>
+            <button class="add-btn" onclick="addToCart(this)">+</button>
+          </div>
+        </div>
+        <!-- 精选推荐 -->
+        <div id="cate2" class="cate-panel" style="display:none;">
+          <div class="goods-banner">
+            <p>App搜索 "7216" 免费领取大额红包</p>
+          </div>
+          <p class="goods-title">精选推荐 人气好物</p>
+
+          <div class="goods-item">
+            <img src="img/img/sp01.png" alt="片皮烤鸭" class="goods-img">
+            <div class="goods-info">
+              <span class="goods-tag">招牌</span>
+              <h3 class="goods-name">片皮烤鸭一只+面皮+秘制酱+葱丝+黄瓜条</h3>
+              <p class="goods-desc">本店热销榜第1名</p>
+              <p class="goods-desc">月售 100+ 好评率 93%</p>
+              <p class="goods-price">
+                <span class="discount">8.1折</span>
+                <span class="original">¥48</span>
+                <span class="sale">¥38.88</span>
+                <span class="sale-tip">预估到手 ¥21.88</span>
+              </p>
+            </div>
+            <button class="add-btn" onclick="addToCart(this)">+</button>
+          </div>
+
+          <div class="goods-item">
+            <img src="img/img/sp01.png" alt="片皮烤鸭" class="goods-img">
+            <div class="goods-info">
+              <span class="goods-tag">招牌</span>
+              <h3 class="goods-name">片皮烤鸭半只+面皮20张</h3>
+              <p class="goods-desc">本店热销榜第5名</p>
+              <p class="goods-desc">月售 95 好评率 97%</p>
+              <p class="goods-price">
+                <span class="discount">9.21折</span>
+                <span class="original">¥27</span>
+                <span class="sale">¥24.88</span>
+                <span class="sale-tip">预估到手 ¥11.88</span>
+              </p>
+            </div>
+            <button class="add-btn" onclick="addToCart(this)">+</button>
+          </div>
+        </div>
+        <!--收藏福利-->
+        <div class="category-item" style="display: none">收藏福利</div>
+        <!--片皮烤鸭-->
+        <div class="category-item" style="display: none">片皮烤鸭</div>
+        <!--砍块烤鸭-->
+        <div class="category-item" style="display: none">砍块烤鸭</div>
+        <!--超料加值-->
+        <div class="category-item" style="display: none">超值加料</div>
+        <!--五常米饭-->
+        <div class="category-item" style="display: none">五常米饭</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 评价面板 -->
+  <div id="tab-comment" class="tab-content">
+    <div class="score-wrap">
+      <div class="big-score">4.4</div>
+      <div>
+        <div class="star-group">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-regular fa-star"></i>
+        </div>
+        <div class="comment-count">1322 条评价</div>
+      </div>
+    </div>
+
+    <div class="comment-item">
+      <div class="comment-user">
+        <div class="avatar"></div>
+        <div class="username">匿名用户</div>
+        <div class="comment-time">2025-05-20</div>
+      </div>
+      <div class="comment-text">烤鸭非常香，皮脆肉嫩，分量很足，酱料也很好吃，配送速度快，包装完好，非常满意！</div>
+      <div class="comment-goods">购买：片皮烤鸭一只</div>
+    </div>
+
+    <div class="comment-item">
+      <div class="comment-user">
+        <div class="avatar"></div>
+        <div class="username">美食爱好者</div>
+        <div class="comment-time">2025-05-19</div>
+      </div>
+      <div class="comment-text">味道很棒，价格实惠，性价比很高，会经常回购！</div>
+      <div class="comment-goods">购买：片皮烤鸭半只</div>
+    </div>
+  </div>
+
+  <!-- 商家面板 -->
+  <div id="tab-shop" class="tab-content">
+    <!-- 商家基础信息卡片 -->
+    <div class="shop-info-card">
+      <div class="shop-header-row">
+        <div class="shop-name">北京片皮烤鸭(书香大地店)</div>
+        <div class="call-btn">
+          <span style="color: #7f8c8d">|</span>
+          <i class="fa-solid fa-phone"></i>
+        </div>
+      </div>
+
+      <div class="info-row">
+        <i class="fa-solid fa-location-dot" style="color: #dddddd"></i>
+        <span class="info-text">云南省昆明市呈贡区吴家营街道办事处书香大地D05-203号商铺</span>
+      </div>
+
+      <div class="info-row">
+        <i class="fa-solid fa-clock" style="color: #dddddd"></i>
+        <span class="info-text">周一至周日 09:30-21:30</span>
+      </div>
+
+      <div class="shop-imgs">
+        <div class="img-item">
+          <img src="img/img/dcfl08.png" alt="门面">
+          <p>门面</p>
+        </div>
+        <div class="img-item">
+          <img src="img/img/dcfl08.png" alt="大堂">
+          <p>大堂</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 商家承诺 -->
+    <div class="promise-card">
+      <h3 class="card-title">商家承诺</h3>
+      <div class="promise-item">
+        <div class="promise-left">
+          <span class="promise-label">食品安全</span>
+          <span class="promise-tags">
+          <span><i class="fa-solid fa-id-card"></i> 亮证经营</span>
+          <span><i class="fa-solid fa-shield-halved"></i> 食无忧保障</span>
+        </span>
+        </div>
+        <i class="fa-solid fa-chevron-right" onclick="window.location.href='certificate.html'"></i>
+      </div>
+      <div class="promise-item">
+        <div class="promise-left">
+          <span class="promise-label">物流保障</span>
+          <span class="promise-tags">
+          <span><i class="fa-solid fa-headset"></i> 售后无忧</span>
+        </span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 举报商家按钮 -->
+    <div class="report-btn" onclick="window.location.href='report.html'">举报商家</div>
+  </div>
+
+  <!-- 底部购物车栏 -->
+  <div class="cart-bar">
+    <div class="cart-left">
+      <div class="cart-icon">
+        <i class="fa-solid fa-box-open" style="font-size: 10vw"></i>
+        <!-- 加一个购物车数量角标 -->
+        <span class="cart-count">0</span>
+      </div>
+      <div>
+        <p class="cart-text">
+          <!-- 这里会显示总价 -->
+          总计：<span id="cartTotal">¥0</span>
+        </p>
+        <p style="font-size:2.8vw;color:#999;">另需配送费约¥3.3 <s>¥6.1</s></p>
+      </div>
+    </div>
+    <div class="cart-right" onclick="goPay()">
+      <span class="start-tip" id="startTip">¥10起送</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,293 @@
+
+
+/*头部样式*/
+.header {
+    display: flex;
+    height: 12vw;
+    width: 100%;
+    background-color: #ED6C2D;
+    padding-left: 3vw;
+    align-items: center;
+    color: white;
+    font-size: 3vw;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.header .logo {
+    font-size: 5.5vw;
+    font-family: "Yuppy TC";
+}
+
+/*搜索框样式*/
+.query {
+    width: 100%;
+    height: 12vw;
+    position: fixed;
+    left: 0;
+    top: 12vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #B4B4B4;
+    background-color: white;
+    font-size: 3.9vw;
+}
+
+.search-panel {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 95%;
+    height: 8vw;
+    border: 2px solid #ED6C2F;
+    border-radius: 15px;
+}
+
+.search-button {
+    width: 17%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ED6C2F;
+    color: white;
+    border-radius: 10px;
+    font-size: 4vw;
+}
+
+/*主体样式*/
+.main {
+    margin-top: 28vw;
+    margin-bottom: 13vw;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.mainTop {
+    color: #999;
+    background-color: white;
+    font-size: 3.2vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.main .mainTop .line {
+    color: #999;
+    border-top: 1.5px solid #DFDFDF;
+    height: 0.1vw;
+    flex: 0 0 32vw;
+}
+
+/*商家样式*/
+.businessList {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.business {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 2vw;
+    background-color: white;
+    width: 96%;
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 3vw 3vw 3vw 3vw;
+}
+
+.business img {
+    width: 20vw;
+    height: 20vw;
+    border-radius: 8px;
+}
+
+.businessInfo {
+    display: flex;
+    flex-direction: column;
+    font-size: 3.2vw;
+    color: #626262;
+    margin-left: 3vw;
+    gap: 3px;
+    width: 100%;
+
+}
+
+.businessTitle {
+    font-size: 3vw;
+    font-weight: bolder;
+    color: #191919;
+}
+.businessTitle h3{
+    margin: 0;
+}
+
+
+.businessSaleInf {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.businessSaleInf .saleInfLeft {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2vw;
+
+}
+
+.businessSaleInf .saleInfLeft .score {
+    color: #ED7531;
+    font-weight: bolder;
+}
+
+.businessSaleInf .saleInfRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2vw;
+}
+
+
+.deliverInf {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.deliverInf .deliverInfLeft {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2vw;
+}
+
+.deliverInf .deliverInfLeft .oldPrice{
+    margin-left: -1.5vw;
+    color: #999999;
+    text-decoration: line-through;
+}
+
+
+.deliverInf .deliverInfRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2vw;
+}
+
+.deliverInf .deliverInfRight div {
+    color: #ED6C2D;
+    font-size: 2.6vw;
+    font-weight: bolder;
+    border: 1px solid #ED6C2D;
+    padding-left: 3px;
+    padding-right: 3px;
+    border-radius: 5px;
+
+}
+
+.describeInf{
+    color:#ED6C2D;
+}
+.describeInf div{
+    border: 1px solid #FCF1E6;
+    width: fit-content;
+    border-radius: 5px;
+    background-color: #FCF1E6;
+    padding: 0.5vw 1vw;
+    font-size: 2.6vw;
+}
+
+.extendInf {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.extendInf .extendInfLeft {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 2vw;
+
+}
+
+.extendInf .extendInfLeft .inf1 {
+    color: #9B521C;
+    font-size: 2.8vw;
+    background-color: #FDF7EB;
+    padding: 0.5vw 1vw;
+    border-radius: 5px;
+    border: 1px solid #E8C094;
+}
+.extendInf .extendInfLeft .inf1 i{
+    background: linear-gradient(0deg, #F1B47F, #E4964F);
+    color: transparent;
+    -webkit-background-clip: text;
+}
+
+.extendInf .extendInfLeft .inf2 {
+    color: #7F889A;
+    font-weight: bolder;
+    font-size: 2.8vw;
+    padding: 0.5vw;
+    border-radius: 5px;
+    border: 1px solid #CBCED6;
+}
+
+.extendInf .extendInfRight {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-size: 2vw;
+}
+
+
+
+/*底部样式*/
+.footer {
+    width: 100%;
+    height: 12vw;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+}
+
+.footer div {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    color: #404454;
+    padding-top: 2vw;
+}
+
+.footer i {
+    font-size: 4.5vw;
+}
+
+.footer p {
+    font-size: 2.5vw;
+}
