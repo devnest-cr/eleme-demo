@@ -4,79 +4,246 @@
     box-sizing: border-box;
 }
 body {
-    background: #f5f5f5;
-    font-family: sans-serif;
+    background: #f6f6f6;
+    font-family: system-ui, sans-serif;
 }
 .wrapper {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #fff8e0 0%, #ffffff 30%);
     padding-bottom: 20vw;
+}
+/* 顶部返回栏 */
+.page-top {
     display: flex;
-    flex-direction: column;
-}
-.top-bar {
-    background: #fff;
-    padding: 4vw;
-    text-align: center;
-    font-size: 4.5vw;
-    font-weight: bold;
-    border-bottom: 1px solid #eee;
-}
-.section {
-    background: #fff;
-    margin: 3vw;
-    border-radius: 2vw;
-    padding: 4vw;
-}
-.section-title {
-    font-size: 4vw;
-    font-weight: bold;
-    margin-bottom: 3vw;
-}
-.addr-item {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
+    padding: 4vw 3vw;
 }
-.addr-info p {
-    font-size: 4vw;
-    margin-bottom: 1vw;
+.top-left {
+    display: flex;
+    align-items: center;
+    gap: 3vw;
 }
-.addr-info span {
+.back-icon {
+    font-size: 5vw;
+    color: #333;
+}
+.page-title-box {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+.page-title {
+    font-size: 5vw;
+    font-weight: bold;
+}
+.title-arrow {
+    font-size: 3.5vw;
+    color: #999;
+}
+.tip-text {
     font-size: 3.2vw;
     color: #666;
+    margin: 0 4vw 4vw;
+    display: flex;
+    align-items: center;
+    gap: 1vw;
 }
-.time-item, .pay-item {
+/* 配送/自取 标签栏 */
+.tab-bar {
+    display: flex;
+    background: #fff;
+    margin: 0 3vw;
+    border-radius: 2vw;
+    overflow: hidden;
+}
+.tab-item {
+    flex: 1;
+    text-align: center;
+    padding: 3vw 0;
+    font-size: 4vw;
+    color: #999;
+    position: relative;
+    cursor: pointer;
+}
+.tab-item.active {
+    color: #333;
+    font-weight: bold;
+}
+.tab-item.active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 15%;
+    width: 70%;
+    height: 0.8vw;
+    background: #ff7800;
+    border-radius: 1vw;
+}
+/* 内容面板 默认隐藏 */
+.panel {
+    display: none;
+    margin: 3vw;
+    background: #fff;
+    border-radius: 2vw;
+    overflow: hidden;
+}
+.panel.active {
+    display: block;
+}
+/* 地址区块通用 */
+.addr-box {
+    padding: 4vw;
+    border-bottom: 1px solid #eee;
+}
+.addr-row-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 3vw;
+}
+.addr-name {
+    font-size: 5vw;
+    font-weight: bold;
+    line-height: 1.3;
+}
+.addr-tag {
+    background: #f5f5f5;
+    padding: 1vw 2vw;
+    border-radius: 3vw;
+    font-size: 3vw;
+    color: #666;
+}
+.addr-info {
+    font-size: 3.5vw;
+    color: #666;
+    margin-bottom: 2vw;
+}
+.phone-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 3vw 0;
-    font-size: 4vw;
+    font-size: 3.8vw;
 }
-.pay-item input {
-    transform: scale(1.3);
+.phone-num {
+    color: #ff6600;
+}
+/* 外卖配送专属时间选择 */
+.time-select-wrap {
+    display: flex;
+    gap: 2vw;
+    margin: 3vw 0;
+}
+.time-card {
+    flex: 1;
+    padding: 2vw;
+    border-radius: 1.5vw;
+    text-align: center;
+}
+.time-card.green {
+    background: #e6f9ee;
+    border: 1px solid #22bb66;
+}
+.time-card.gray {
+    background: #f5f5f5;
+}
+.time-card .label {
+    font-size: 3.8vw;
+    font-weight: bold;
+}
+.time-card .desc {
+    font-size: 3vw;
+    color: #666;
+    margin-top: 0.5vw;
+}
+/* 增值服务行 */
+.service-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5vw 4vw;
+    border-bottom: 1px solid #eee;
+    font-size: 3.8vw;
+}
+.service-left {
+    display: flex;
+    align-items: center;
+    gap: 1vw;
+}
+.service-tag {
+    background: #22bb66;
+    color: #fff;
+    font-size: 2.8vw;
+    padding: 0.3vw 1vw;
+    border-radius: 1vw;
+}
+/* 商品列表 */
+.shop-title {
+    padding: 3vw 4vw 1vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 4vw;
+    font-weight: 500;
+}
+.shop-tag {
+    color: #ff7800;
+    font-size: 3vw;
+}
+.goods-list {
+    padding: 2vw 4vw;
 }
 .goods-item {
     display: flex;
-    justify-content: space-between;
-    padding: 2vw 0;
-    font-size: 3.8vw;
+    margin: 3vw 0;
+    gap: 3vw;
 }
-.price-row {
-    display: flex;
-    justify-content: space-between;
+.goods-img {
+    width: 18vw;
+    height: 18vw;
+    border-radius: 1vw;
+    object-fit: cover;
+}
+.goods-text {
+    flex: 1;
+}
+.goods-name {
+    font-size: 4vw;
+    margin-bottom: 0.5vw;
+}
+.goods-spec {
+    font-size: 3vw;
+    color: #999;
+}
+.goods-price {
+    font-size: 4vw;
+    font-weight: 500;
+}
+.expand-more {
+    text-align: center;
     padding: 2vw 0;
     font-size: 3.5vw;
-    color: #666;
+    color: #999;
 }
-.total-row {
+/* 费用行 */
+.fee-row {
     display: flex;
     justify-content: space-between;
-    padding: 3vw 0;
-    font-size: 4.5vw;
-    font-weight: bold;
-    color: #ff3000;
-    border-top: 1px solid #eee;
+    padding: 2vw 4vw;
+    font-size: 3.8vw;
+    color: #333;
 }
-.pay-footer {
+.coupon-bar {
+    margin: 2vw 3vw;
+    background: #222;
+    color: #fff;
+    text-align: center;
+    padding: 2vw;
+    border-radius: 10vw;
+    font-size: 3.5vw;
+}
+/* 底部结算栏 */
+.bottom-pay-bar {
     position: fixed;
     bottom: 0;
     left: 0;
@@ -88,16 +255,26 @@ body {
     padding: 3vw 4vw;
     border-top: 1px solid #eee;
 }
-.pay-total {
-    font-size: 4.5vw;
+.total-text {
+    font-size: 4vw;
+}
+.total-price {
+    font-size: 5vw;
     font-weight: bold;
-    color: #ff3000;
+    color: #ff3300;
 }
 .pay-btn {
-    background: #ff6600;
+    background: #ff7800;
     color: #fff;
-    padding: 2.5vw 6vw;
-    border-radius: 3vw;
-    font-size: 4vw;
+    padding: 3vw 7vw;
+    border-radius: 10vw;
+    font-size: 4.5vw;
     font-weight: bold;
+}
+.discount-desc {
+    position: fixed;
+    bottom: 12vw;
+    left: 4vw;
+    font-size: 3.2vw;
+    color: #ff3300;
 }
